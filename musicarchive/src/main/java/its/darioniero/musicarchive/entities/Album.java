@@ -22,7 +22,7 @@ public class Album {
     private String title;
 
     @Column(name = "year")
-    private Date year;
+    private int year;
 
     @Column(name="author")
     private String author;
