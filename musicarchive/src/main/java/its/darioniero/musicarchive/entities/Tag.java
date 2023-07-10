@@ -13,8 +13,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Tag {
 
-    @Id
+    @EmbeddedId
+    private TagId id;
+
     @JoinColumn(name = "song_id", referencedColumnName = "id")
+    @MapsId("songId")
     @ManyToOne(cascade = CascadeType.ALL)
     private Song song;
 
