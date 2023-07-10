@@ -1,0 +1,7 @@
+package its.darioniero.musicarchive.repositories;
+
+import its.darioniero.musicarchive.entities.Song;
+import org.springframework.data.repository.CrudRepository;
+
+public interface SongRepository extends CrudRepository<Song, Long> {
+}
