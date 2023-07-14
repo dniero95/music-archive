@@ -9,5 +9,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TagWithNumberOfSongs {
     private String tag;
-    private int numberOfSongs;
+    private Long numberOfSongs;
+
+    public String getTag() {
+        return tag;
+    }
+
+    public Long getNumberOfSongs() {
+        return numberOfSongs;
+    }
 }

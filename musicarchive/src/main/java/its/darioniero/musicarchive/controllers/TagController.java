@@ -1,6 +1,7 @@
 package its.darioniero.musicarchive.controllers;
 
 import its.darioniero.musicarchive.entities.Tag;
+import its.darioniero.musicarchive.models.TagWithNumberOfSongs;
 import its.darioniero.musicarchive.services.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,7 +24,7 @@ public class TagController {
 
     @GetMapping("/tags")
     public String getTagView(Model model){
-        List<Tag> tags = tagService.fetchMostPopularTags();
+        List<TagWithNumberOfSongs> tags = tagService.fetchTagsWithNumberOfSongs();
         model.addAttribute("tags",tags);
         return "tag";
     }

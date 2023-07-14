@@ -25,10 +25,10 @@
         <tbody>
           <tr th:each="tag: ${tags}">
             <th scope="row">
-              <a th:href="@{'/songs?tag=' + ${tag.tag}}" th:text="${tag.tag}">
+              <a class="text-secondary" th:href="@{'/songs?tag=' + ${tag.getTag()} }" th:text="${tag.getTag()}">
               </a>
             </th>
-            <td></td>
+            <td th:text="${tag.getNumberOfSongs()}"></td>
           </tr>
         </tbody>
       </table>

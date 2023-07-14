@@ -25,6 +25,6 @@ public class Song {
 
 
     @JoinColumn(name = "album_id", referencedColumnName = "id")
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     private Album album;
 }
