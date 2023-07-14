@@ -25,7 +25,7 @@
         <tbody>
           <tr th:each="tag: ${tags}">
             <th scope="row">
-              <a th:href="@{'/song?tag=' + ${tag.tag}}" th:text="${tag.tag}">
+              <a th:href="@{'/songs?tag=' + ${tag.tag}}" th:text="${tag.tag}">
               </a>
             </th>
             <td></td>
