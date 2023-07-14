@@ -11,4 +11,6 @@ import java.util.List;
 public interface TagRepository extends CrudRepository<Tag, Long> {
     @Query("SELECT t FROM Tag t ORDER BY t.weight DESC, t.tag ASC")
     List<Tag> findAllByWeightLimitedTo100();
+
+    List<Tag> findAllByTag(String tag);
 }

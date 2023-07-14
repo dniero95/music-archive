@@ -11,33 +11,28 @@
     <title>Music Archive | Tags</title>
   </head>
   <body>
-    <div th:each="tag: ${tags}" th:text="${tag.tag}"></div>
+    <!--    <div th:each="tag: ${tags}" th:text="${tag.tag}"></div>-->
 
     <h1 class="text-center m-5">Popular Tags</h1>
-    <div class="container ">
-    <table class="table table-striped table-hover">
-      <thead>
-        <tr>
-          <th scope="col">Tag</th>
-          <th scope="col">number of songs associeted</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Folks</th>
-          <td>10</td>
-        </tr>
-        <tr>
-          <th scope="row">Rocks</th>
-          <td>11</td>
-        </tr>
-        <tr th:each="tag: ${tags}">
-          <th scope="row" th:text="${tag.tag}"></th>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-</div>
+    <div class="container">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Tag</th>
+            <th scope="col">number of songs associeted</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="tag: ${tags}">
+            <th scope="row">
+              <a th:href="@{'/song?tag=' + ${tag.tag}}" th:text="${tag.tag}">
+              </a>
+            </th>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <!-- end of body -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

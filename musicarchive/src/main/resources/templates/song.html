@@ -13,6 +13,8 @@
   <body>
     <h1 class="text-center m-5">Songs List</h1>
     <div class="container"></div>
+
+    <p th:each="song: ${songs}" th:text="${song.getTitle()}"></p>
     <!-- end of body -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

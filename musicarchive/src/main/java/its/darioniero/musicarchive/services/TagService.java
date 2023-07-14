@@ -22,4 +22,8 @@ public class TagService {
         return tagRepository.findAllByWeightLimitedTo100();
     }
 
+    public List<Tag> fetchTagsByTag(String tag){
+        return tagRepository.findAllByTag(tag);
+    }
+
 }
